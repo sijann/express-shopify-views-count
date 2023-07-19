@@ -1,9 +1,11 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
+var cors = require('cors');
 require("dotenv").config();
 
 const app = express();
+app.use(cors());
 const PORT = 3001;
 const MONGO_URL = process.env.MONGO_URL;
 
